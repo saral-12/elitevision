@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --color-luxury-beige: #F6F1EA;
+  --color-luxury-gold: #C8A96A;
+  --color-luxury-gold-light: #DFCA9B;
+  --color-luxury-black: #111111;
+  --color-luxury-gray: #4A4A4A;
+  
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-inter), sans-serif;
+  
+  --animate-shimmer: shimmer 3s infinite linear;
+  --animate-float-slow: float 8s ease-in-out infinite;
+  --animate-float-medium: float-med 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 4s ease-in-out infinite;
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) scale(1);
+    }
+    50% {
+      transform: translateY(-15px) scale(1.05);
+    }
+  }
+  @keyframes float-med {
+    0%, 100% {
+      transform: translateY(0px) scale(1);
+    }
+    50% {
+      transform: translateY(-8px) scale(1.02);
+    }
+  }
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.45;
+    }
+  }
+}
+
+:root {
+  --font-geist-sans: var(--font-inter);
+  --font-geist-mono: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-luxury-beige);
+  color: var(--color-luxury-black);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(200, 169, 106, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.03);
+}
+
+.glass-card-dark {
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(200, 169, 106, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Luxury button gold shimmer */
+.shimmer-button {
+  background: linear-gradient(90deg, #C8A96A 0%, #E3D2A6 50%, #C8A96A 100%);
+  background-size: 200% auto;
+}
+
+.shimmer-button:hover {
+  animation: shimmer 1.5s infinite linear;
+}
+
+/* Custom Scrollbar for Luxury Feeling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F6F1EA;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8A96A;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B2955B;
+}
+
+/* Smooth transition utility */
+.transition-luxury {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
