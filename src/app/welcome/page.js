@@ -109,34 +109,35 @@ export default function Welcome() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="max-w-2xl mx-auto flex flex-col space-y-6 relative"
           >
+            {/* Connecting line for sequence */}
+            <div className="absolute left-[20px] top-4 bottom-4 w-[1px] bg-gradient-to-b from-gold/10 via-gold/40 to-gold/10 -translate-x-[0.5px] pointer-events-none hidden sm:block"></div>
+
             {funnelConfig.steps.map((stepItem, index) => {
               const IconComponent = stepIcons[index] || Sparkles;
               return (
                 <motion.div
                   key={stepItem.step}
                   variants={itemVariants}
-                  whileHover={{ y: -5, borderColor: "rgba(212, 175, 55, 0.4)" }}
-                  className="glass-card rounded-xl p-6 border border-gold/15 transition-all duration-300 shadow-md flex flex-col items-center text-center relative group"
+                  className="flex items-start gap-4 p-4 rounded-xl border border-gold/10 bg-white/40 backdrop-blur-sm hover:border-gold/30 hover:bg-white/60 transition-all duration-300 group shadow-sm z-10"
                 >
-                  {/* Step Badge */}
-                  <span className="absolute -top-3 left-6 bg-luxury-black text-gold text-[10px] font-bold tracking-widest px-2.5 py-1 rounded-full border border-gold/30">
-                    STEP {stepItem.step}
-                  </span>
-
-                  {/* Icon */}
-                  <div className="w-12 h-12 rounded-full bg-[#111111]/5 flex items-center justify-center mb-4 group-hover:bg-luxury-black group-hover:text-gold transition-colors duration-300 text-luxury-black mt-2">
-                    <IconComponent className="w-5 h-5" />
+                  {/* Sequence Bullet/Icon */}
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-luxury-black text-gold flex items-center justify-center border border-gold/30 shadow-md group-hover:scale-105 transition-transform duration-300">
+                    <IconComponent className="w-4 h-4" />
                   </div>
 
-                  {/* Title & Desc */}
-                  <h3 className="font-serif-luxury text-sm font-semibold text-luxury-black mb-2 tracking-wide">
-                    {stepItem.title}
-                  </h3>
-                  <p className="text-xs text-gray-500 font-sans-luxury font-light leading-relaxed">
-                    {stepItem.description}
-                  </p>
+                  <div className="flex-grow pt-1">
+                    <h3 className="font-serif-luxury text-sm font-semibold text-luxury-black mb-1 flex items-center gap-2 tracking-wide group-hover:text-gold transition-colors duration-300">
+                      <span className="text-[10px] tracking-widest text-gold font-sans-luxury uppercase font-bold mr-1">
+                        Step {stepItem.step}:
+                      </span>
+                      {stepItem.title}
+                    </h3>
+                    <p className="text-xs text-gray-500 font-sans-luxury font-light leading-relaxed">
+                      {stepItem.description}
+                    </p>
+                  </div>
                 </motion.div>
               );
             })}
