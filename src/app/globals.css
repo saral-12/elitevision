@@ -72,13 +72,59 @@
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
-/* Luxury Abstract Backgrounds */
+/* Luxury Abstract Backgrounds - Updated to beautiful premium dark theme */
 .bg-luxury-gradient {
-  background: radial-gradient(circle at 10% 20%, rgba(248, 246, 242, 1) 0%, rgba(238, 234, 225, 1) 90%);
+  background: radial-gradient(circle at 50% 50%, #1A1815 0%, #0F0E0C 100%);
 }
 
 .bg-luxury-dark-gradient {
   background: radial-gradient(circle at 50% 50%, #1A1A1A 0%, #111111 100%);
+}
+
+.text-luxury-black,
+h1.text-luxury-black,
+h2.text-luxury-black,
+h3.text-luxury-black,
+h4.text-luxury-black,
+strong.text-luxury-black,
+span.text-luxury-black {
+  color: #F3EFE6 !important;
+}
+
+.text-gray-900,
+.text-gray-800,
+.text-gray-700 {
+  color: #E3DDD3 !important;
+}
+
+.text-gray-600,
+.text-gray-500 {
+  color: #B2A899 !important;
+}
+
+.glass-card {
+  background: rgba(28, 25, 22, 0.75) !important;
+  border-color: rgba(212, 175, 55, 0.25) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+.bg-white\/50 {
+  background-color: rgba(28, 25, 22, 0.55) !important;
+}
+
+.bg-white\/60 {
+  background-color: rgba(28, 25, 22, 0.65) !important;
+}
+
+input, select, textarea {
+  background-color: rgba(18, 16, 14, 0.8) !important;
+  color: #F3EFE6 !important;
+  border-color: rgba(212, 175, 55, 0.2) !important;
+}
+
+input:focus {
+  background-color: rgba(10, 9, 8, 0.9) !important;
+  border-color: #D4AF37 !important;
 }
 
 /* Gold Highlights & Glow */
@@ -108,7 +154,7 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F8F6F2;
+  background: #0F0E0C;
 }
 ::-webkit-scrollbar-thumb {
   background: #D4AF37;
