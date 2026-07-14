@@ -24,7 +24,7 @@ export const funnelConfig = {
     {
       step: 4,
       title: "Complete Payment",
-      description: "Pay the refundable application fee to secure your booking."
+      description: "Pay the application fee to secure your booking."
     },
     {
       step: 5,
@@ -43,10 +43,10 @@ export const funnelConfig = {
     }
   ],
   pricing: {
-    fee: 999,
-    formattedFee: "₹999",
+    fee: 199,
+    formattedFee: "₹199",
     currency: "INR",
-    type: "Refundable Application Fee"
+    type: "Non-Refundable Application Fee"
   },
   video: {
     embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Placeholder video

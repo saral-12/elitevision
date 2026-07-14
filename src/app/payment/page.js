@@ -168,7 +168,7 @@ export default function Payment() {
               Strategic Audit — Book Your Call Now
             </h1>
             <p className="text-gray-600 font-sans-luxury text-sm leading-relaxed font-light">
-              We are excited to discover if we're the right fit to help you transform your life and build the future you truly deserve. Pay a refundable <strong className="text-luxury-black font-semibold">₹999 application fee</strong> to reserve your strategy session.
+              We are excited to discover if we're the right fit to help you transform your life and build the future you truly deserve. Pay a <strong className="text-luxury-black font-semibold">₹199 application fee</strong> to reserve your strategy session.
             </p>
           </div>
 
@@ -191,7 +191,7 @@ export default function Payment() {
           <div className="space-y-3 text-xs text-gray-500 font-sans-luxury font-light leading-relaxed">
             <p>• After payment, you will be redirected to complete your application form.</p>
             <p>• Our team will carefully review your submission and contact you within 48 hours.</p>
-            <p>• The application fee is fully refundable if we are not a fit or if you attend the call.</p>
+            <p>• The application fee is non-refundable and secures your session booking with Coach Nidhi Jain.</p>
           </div>
 
           {/* Contact Details */}
@@ -228,7 +228,7 @@ export default function Payment() {
                 </span>
               </div>
               <span className="text-[10px] bg-gold/10 border border-gold/30 text-gold px-2.5 py-1 rounded-full font-sans-luxury font-semibold uppercase tracking-wider">
-                Refundable
+                Non-Refundable
               </span>
             </div>
 
