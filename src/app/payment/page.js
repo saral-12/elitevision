@@ -253,6 +253,7 @@ export default function Payment() {
                   </span>
                   <input
                     type="email"
+                    autoComplete="off"
                     placeholder="name@domain.com"
                     className={`w-full pl-10 pr-4 py-2.5 rounded-lg border bg-white/60 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold transition-all duration-300 font-sans-luxury text-sm
                       ${errors.email ? "border-red-400 focus:ring-red-400" : "border-gold/15 focus:border-gold"}
@@ -283,6 +284,7 @@ export default function Payment() {
                     </span>
                     <input
                       type="text"
+                      autoComplete="off"
                       className="w-full pl-8 pr-2 py-2.5 rounded-lg border border-gold/15 bg-white/60 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold text-sm font-sans-luxury"
                       {...register("countryCode")}
                     />
@@ -299,6 +301,7 @@ export default function Payment() {
                     </span>
                     <input
                       type="tel"
+                      autoComplete="off"
                       placeholder="9876543210"
                       className={`w-full pl-10 pr-4 py-2.5 rounded-lg border bg-white/60 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold transition-all duration-300 font-sans-luxury text-sm
                         ${errors.phone ? "border-red-400 focus:ring-red-400" : "border-gold/15 focus:border-gold"}

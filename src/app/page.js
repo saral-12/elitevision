@@ -102,6 +102,7 @@ export default function Registration() {
                 <input
                   id="fullName"
                   type="text"
+                  autoComplete="off"
                   placeholder="John Doe"
                   className={`w-full pl-10 pr-4 py-3 rounded-lg border bg-white/60 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold transition-all duration-300 font-sans-luxury text-sm
                     ${errors.fullName ? "border-red-400 focus:ring-red-400" : "border-gold/15 focus:border-gold"}
@@ -128,6 +129,7 @@ export default function Registration() {
                 <input
                   id="email"
                   type="email"
+                  autoComplete="off"
                   placeholder="john@example.com"
                   className={`w-full pl-10 pr-4 py-3 rounded-lg border bg-white/60 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold transition-all duration-300 font-sans-luxury text-sm
                     ${errors.email ? "border-red-400 focus:ring-red-400" : "border-gold/15 focus:border-gold"}
@@ -160,6 +162,7 @@ export default function Registration() {
                 <input
                   id="phone"
                   type="tel"
+                  autoComplete="off"
                   placeholder="9876543210"
                   className={`w-full pl-10 pr-4 py-3 rounded-lg border bg-white/60 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold transition-all duration-300 font-sans-luxury text-sm
                     ${errors.phone ? "border-red-400 focus:ring-red-400" : "border-gold/15 focus:border-gold"}
