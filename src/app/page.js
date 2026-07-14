@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Sparkles, User, Mail, Phone, ArrowRight } from "lucide-react";
 import { funnelConfig } from "@/config/funnelConfig";
 
@@ -50,9 +51,14 @@ export default function Registration() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-20 h-20 rounded-full bg-luxury-black border border-gold/35 flex items-center justify-center mb-6 shadow-xl gold-border-glow"
+          className="relative w-20 h-20 rounded-full overflow-hidden bg-luxury-black border border-gold/35 flex items-center justify-center mb-6 shadow-xl gold-border-glow"
         >
-          <Sparkles className="w-9 h-9 text-gold animate-pulse" />
+          <Image
+            src="/images/logo.png"
+            alt="Elite Vision Empire Logo"
+            fill
+            className="object-cover"
+          />
         </motion.div>
 
         {/* Headings */}

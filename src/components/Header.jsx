@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Sparkles } from "lucide-react";
 import ProgressIndicator from "./ProgressIndicator";
 
@@ -11,9 +12,14 @@ export default function Header() {
         <div className="flex flex-col md:flex-row items-center justify-between py-4 md:py-3 gap-4">
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="w-9 h-9 rounded-full bg-luxury-black flex items-center justify-center border border-gold/40 transition-transform duration-500 group-hover:rotate-180">
-              <Sparkles className="w-4 h-4 text-gold" />
-            </span>
+            <div className="relative w-9 h-9 rounded-full overflow-hidden border border-gold/40 transition-transform duration-500 group-hover:rotate-12 bg-luxury-black flex-shrink-0">
+              <Image
+                src="/images/logo.png"
+                alt="Elite Vision Empire Logo"
+                fill
+                className="object-cover"
+              />
+            </div>
             <div className="flex flex-col">
               <span className="font-serif-luxury text-sm font-bold tracking-widest text-luxury-black uppercase group-hover:text-gold transition-colors duration-300">
                 Elite Vision Empire
