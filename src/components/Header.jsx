@@ -6,7 +6,7 @@ import ProgressIndicator from "./ProgressIndicator";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#F8F6F2]/80 backdrop-blur-md border-b border-gold/10">
+    <header className="sticky top-0 z-50 w-full bg-[#0F0E0C]/80 backdrop-blur-md border-b border-gold/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between py-4 md:py-3 gap-4">
           {/* Logo Section */}

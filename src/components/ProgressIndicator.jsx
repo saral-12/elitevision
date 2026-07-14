@@ -22,7 +22,7 @@ export default function ProgressIndicator() {
     <div className="w-full max-w-3xl mx-auto px-4 py-6 md:py-8">
       <div className="relative flex items-center justify-between">
         {/* Background Line */}
-        <div className="absolute left-0 right-0 top-1/2 h-[2px] bg-gray-200 -translate-y-1/2 z-0" />
+        <div className="absolute left-0 right-0 top-1/2 h-[2px] bg-white/10 -translate-y-1/2 z-0" />
 
         {/* Progress Line */}
         <motion.div
@@ -46,7 +46,7 @@ export default function ProgressIndicator() {
                 className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-colors duration-300 font-sans-luxury text-sm font-semibold
                   ${isCompleted ? "bg-gold border-gold text-white" : ""}
                   ${isActive ? "bg-luxury-black border-gold text-gold gold-border-glow" : ""}
-                  ${!isCompleted && !isActive ? "bg-white border-gray-300 text-gray-400" : ""}
+                  ${!isCompleted && !isActive ? "bg-luxury-black/40 border-gold/20 text-gray-500" : ""}
                 `}
                 animate={isActive ? { scale: [1, 1.08, 1] } : { scale: 1 }}
                 transition={{
