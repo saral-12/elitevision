@@ -33,7 +33,7 @@ export default function Payment() {
       email: "",
       phone: "",
       countryCode: "+91",
-      amount: "₹999",
+      amount: funnelConfig.pricing.formattedFee,
     }
   });
 
