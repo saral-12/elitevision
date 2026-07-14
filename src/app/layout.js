@@ -52,6 +52,18 @@ export default function RootLayout({ children }) {
         <main className="flex-grow flex flex-col justify-between">
           {children}
         </main>
+        <footer className="w-full bg-[#0F0E0C] border-t border-gold/10 py-6 text-center text-xs text-gray-500 font-sans-luxury relative z-10">
+          <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-1.5">
+              <span className="text-gold font-serif-luxury font-semibold tracking-widest text-[10px] uppercase">
+                Elite Vision Empire
+              </span>
+            </div>
+            <p className="text-[10px] tracking-wider text-gray-500">
+              © {new Date().getFullYear()} Elite Vision Empire. All rights reserved.
+            </p>
+          </div>
+        </footer>
       </body>
     </html>
   );
