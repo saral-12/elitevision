@@ -93,6 +93,25 @@ export default function Welcome() {
           ></iframe>
         </motion.div>
 
+        {/* CTA Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center mb-16"
+        >
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            onClick={handleNext}
+            className="flex items-center gap-2 py-4 px-10 rounded-full text-white font-sans-luxury font-medium text-sm tracking-wider uppercase shimmer-btn border border-transparent cursor-pointer shadow-lg"
+          >
+            <span>Book Your Strategy Call</span>
+            <ArrowRight className="w-4 h-4" />
+          </motion.button>
+        </motion.div>
+
         {/* Roadmap Section */}
         <div className="mb-12">
           <motion.h2
@@ -143,25 +162,6 @@ export default function Welcome() {
             })}
           </motion.div>
         </div>
-
-        {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="flex justify-center mt-6"
-        >
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={handleNext}
-            className="flex items-center gap-2 py-4 px-10 rounded-full text-white font-sans-luxury font-medium text-sm tracking-wider uppercase shimmer-btn border border-transparent cursor-pointer shadow-lg"
-          >
-            <span>Book Your Strategy Call</span>
-            <ArrowRight className="w-4 h-4" />
-          </motion.button>
-        </motion.div>
 
       </div>
     </div>
